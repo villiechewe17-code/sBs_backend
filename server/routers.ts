@@ -433,9 +433,9 @@ export const appRouter = router({
   // ============================================
   r2: router({
     /**
-     * Generate presigned URL for file upload (admin only)
+     * Generate presigned URL for file upload
      */
-    getUploadUrl: adminProcedure
+    getUploadUrl: publicProcedure
       .input(
         z.object({
           fileName: z.string().min(1),
